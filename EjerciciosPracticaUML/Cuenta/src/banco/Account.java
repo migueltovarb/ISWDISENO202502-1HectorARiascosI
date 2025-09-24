@@ -59,9 +59,10 @@ public class Account {
         return balance;
     }
 
-    // toString
+    // Representación en texto
     @Override
     public String toString() {
-        return "Account[id=" + id + ",name=" + name + ",balance=" + balance + "]";
+        return "Account[id=" + id + ", name=" + name + ", balance=" + balance + "]";
     }
 }
+

@@ -1,27 +1,53 @@
 package factura;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class TestInvoiceItem {
     public static void main(String[] args) {
-        // Crear ítems de factura
-        InvoiceItem item1 = new InvoiceItem("A101", "Laptop", 2, 3500.50);
-        InvoiceItem item2 = new InvoiceItem("B202", "Mouse", 5, 120.75);
+        Scanner sc = new Scanner(System.in);
+        ArrayList<InvoiceItem> factura = new ArrayList<>();
 
-        // Imprimir información
-        System.out.println(item1); 
-        System.out.println("ID: " + item1.getID());
-        System.out.println("Descripción: " + item1.getDesc());
-        System.out.println("Cantidad: " + item1.getQty());
-        System.out.println("Precio unitario: " + item1.getUnitPrice());
-        System.out.println("Total: " + item1.getTotal());
+        System.out.println("===== SISTEMA DE FACTURACIÓN =====");
 
-        System.out.println("\n" + item2);
-        System.out.println("Total: " + item2.getTotal());
+        boolean agregarMas = true;
+        while (agregarMas) {
+            System.out.print("\nIngrese el ID del producto: ");
+            String id = sc.nextLine();
 
-        // Modificar cantidad y precio
-        item2.setQty(10);
-        item2.setUnitPrice(100.00);
-        System.out.println("\nDespués de cambios:");
-        System.out.println(item2);
-        System.out.println("Total actualizado: " + item2.getTotal());
+            System.out.print("Ingrese la descripción del producto: ");
+            String desc = sc.nextLine();
+
+            System.out.print("Ingrese la cantidad: ");
+            int qty = sc.nextInt();
+
+            System.out.print("Ingrese el precio unitario: ");
+            double unitPrice = sc.nextDouble();
+            sc.nextLine(); // limpiar buffer
+
+            // Crear ítem y añadirlo a la factura
+            InvoiceItem item = new InvoiceItem(id, desc, qty, unitPrice);
+            factura.add(item);
+
+            System.out.print("\n¿Desea agregar otro producto? (s/n): ");
+            String respuesta = sc.nextLine();
+            if (!respuesta.equalsIgnoreCase("s")) {
+                agregarMas = false;
+            }
+        }
+
+        // Mostrar factura completa
+        System.out.println("\n===== FACTURA FINAL =====");
+        double totalFactura = 0;
+        for (InvoiceItem item : factura) {
+            System.out.println(item);
+            System.out.println("   Subtotal: " + item.getTotal());
+            totalFactura += item.getTotal();
+        }
+
+        System.out.println("---------------------------");
+        System.out.println("TOTAL A PAGAR: " + totalFactura);
+
+        sc.close();
     }
 }
