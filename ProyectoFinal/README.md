@@ -2,13 +2,13 @@
 
 Sistema completo de gestión de turnos para laboratorios de computación, desarrollado con Spring Boot y React.
 
-## ✅ SISTEMA FUNCIONANDO
+## SISTEMA FUNCIONANDO
 
-### 🌐 Acceso Rápido
+###  Acceso Rápido
 - **Frontend**: http://localhost:3000
 - **Backend**: http://localhost:8080
 
-### 📊 Estado Actual
+### Estado Actual
 - ✅ Backend corriendo (Puerto 8080)
 - ✅ Frontend corriendo (Puerto 3000)
 - ✅ Base de datos MongoDB Atlas conectada
@@ -16,7 +16,7 @@ Sistema completo de gestión de turnos para laboratorios de computación, desarr
 
 ---
 
-## 🚀 Inicio Rápido
+##  Inicio Rápido
 
 ### 1. Accede al Sistema
 Abre tu navegador en:
@@ -35,7 +35,7 @@ http://localhost:3000
 
 ---
 
-## 📚 Documentación
+##  Documentación
 
 | Documento | Descripción |
 |-----------|-------------|
@@ -47,7 +47,7 @@ http://localhost:3000
 
 ---
 
-## 🎯 Funcionalidades
+##  Funcionalidades
 
 ### Para Estudiantes
 - ✅ Registro y autenticación
@@ -63,7 +63,7 @@ http://localhost:3000
 
 ---
 
-## 🛠️ Tecnologías
+##  Tecnologías
 
 ### Backend
 - Java 17
@@ -78,7 +78,7 @@ http://localhost:3000
 
 ---
 
-## 📦 Estructura del Proyecto
+##  Estructura del Proyecto
 
 ```
 LAB-TURNOS/
@@ -94,7 +94,7 @@ LAB-TURNOS/
 
 ---
 
-## 🔄 Reiniciar el Sistema
+## Reiniciar el Sistema
 
 ### Backend
 ```bash
@@ -112,7 +112,7 @@ Ver guía completa: [COMO-REINICIAR.md](COMO-REINICIAR.md)
 
 ---
 
-## 🧪 Pruebas con Postman
+##  Pruebas con Postman
 
 1. Importa colecciones desde `postman/`
 2. Selecciona entorno "LAB-TURNOS Environment"
@@ -122,7 +122,7 @@ Ver guía: [INSTRUCCIONES-POSTMAN.md](INSTRUCCIONES-POSTMAN.md)
 
 ---
 
-## 📊 Datos Disponibles
+##  Datos Disponibles
 
 ### Laboratorios
 - **LAB-A**: 10 equipos (PC-A-01 a PC-A-10)
@@ -135,7 +135,7 @@ Ver guía: [INSTRUCCIONES-POSTMAN.md](INSTRUCCIONES-POSTMAN.md)
 
 ---
 
-## 🎓 Historias de Usuario
+##  Historias de Usuario
 
 | ID | Historia | Estado |
 |----|----------|--------|
@@ -152,7 +152,7 @@ Ver guía: [INSTRUCCIONES-POSTMAN.md](INSTRUCCIONES-POSTMAN.md)
 
 ---
 
-## 📞 Endpoints API
+##  Endpoints API
 
 ### Usuarios
 - `POST /api/usuarios/registro` - Registrar
@@ -177,7 +177,7 @@ Ver guía: [INSTRUCCIONES-POSTMAN.md](INSTRUCCIONES-POSTMAN.md)
 
 ---
 
-## 🐛 Troubleshooting
+##  Troubleshooting
 
 Ver guía completa: [COMO-REINICIAR.md](COMO-REINICIAR.md)
 
@@ -198,7 +198,7 @@ Usa `LAB-A` o `LAB-B` como laboratorioId
 
 ---
 
-## ✨ ¡Listo para Usar!
+##  ¡Listo para Usar!
 
 El sistema está completamente funcional. Abre tu navegador en:
 
@@ -206,11 +206,11 @@ El sistema está completamente funcional. Abre tu navegador en:
 
 ---
 
-## 📝 Licencia
+##  Licencia
 
 Proyecto académico - Universidad
 
-## 👥 Autores
+##  Autores
 
 Diseño de Software - Cuarto Semestre
 

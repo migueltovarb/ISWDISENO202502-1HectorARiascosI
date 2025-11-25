@@ -47,36 +47,32 @@ public class DataInitService implements CommandLineRunner {
     }
     
     private void inicializarEquipos() {
-        // Obtener laboratorios por ID conocidos
-        Laboratorio labA = laboratorioRepository.findById("LAB-A").orElse(null);
-        Laboratorio labB = laboratorioRepository.findById("LAB-B").orElse(null);
+        // Obtener todos los laboratorios existentes
+        var laboratorios = laboratorioRepository.findAll();
         
-        if (labA != null) {
-            // Equipos Lab A
-            for (int i = 1; i <= 10; i++) {
+        for (Laboratorio lab : laboratorios) {
+            // Generar código corto del laboratorio (primera letra del nombre o últimos caracteres del ID)
+            String labCode = lab.getNombre().substring(lab.getNombre().length() - 1);
+            if (labCode.matches("\\d+")) {
+                // Si termina en número, usar ese número
+                labCode = labCode;
+            } else {
+                // Si no, usar la primera letra
+                labCode = lab.getNombre().substring(0, 1).toUpperCase();
+            }
+            
+            // Crear equipos según la capacidad del laboratorio
+            int capacidad = lab.getCapacidadTotal();
+            for (int i = 1; i <= capacidad; i++) {
                 Equipo equipo = new Equipo();
-                equipo.setCodigo("PC-A-" + String.format("%02d", i));
-                equipo.setLaboratorioId("LAB-A");
-                equipo.setTipo("PC");
+                equipo.setCodigo("PC-" + labCode + "-" + String.format("%02d", i));
+                equipo.setLaboratorioId(lab.getId());
+                equipo.setTipo("Computador de escritorio");
                 equipo.setEstado(EstadoEquipo.DISPONIBLE);
-                equipo.setEspecificaciones(i <= 5 ? "Intel i7, 16GB RAM, SSD 512GB" : "Intel i5, 8GB RAM, SSD 256GB");
+                equipo.setEspecificaciones(i <= capacidad/2 ? "Intel i7, 16GB RAM, SSD 512GB" : "Intel i5, 8GB RAM, SSD 256GB");
                 equipoRepository.save(equipo);
             }
-            System.out.println("✓ 10 Equipos creados para LAB-A");
-        }
-        
-        if (labB != null) {
-            // Equipos Lab B
-            for (int i = 1; i <= 8; i++) {
-                Equipo equipo = new Equipo();
-                equipo.setCodigo("PC-B-" + String.format("%02d", i));
-                equipo.setLaboratorioId("LAB-B");
-                equipo.setTipo("PC");
-                equipo.setEstado(EstadoEquipo.DISPONIBLE);
-                equipo.setEspecificaciones("Intel i5, 8GB RAM, SSD 256GB");
-                equipoRepository.save(equipo);
-            }
-            System.out.println("✓ 8 Equipos creados para LAB-B");
+            System.out.println("✓ " + capacidad + " Equipos creados para " + lab.getNombre() + " (ID: " + lab.getId() + ")");
         }
     }
 }

@@ -15,18 +15,21 @@ function App() {
 
   useEffect(() => {
     verificarSesion();
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  }, []);
 
   const verificarSesion = async () => {
     try {
       const response = await api.get('/usuarios/session');
-      if (response.data.success) {
+      if (response.data && response.data.success) {
         const userData = response.data.data;
         setUsuario(userData);
         setCurrentView(userData.rol === 'PROFESOR' ? 'profesor' : 'disponibilidad');
+      } else {
+        setUsuario(null);
       }
     } catch (error) {
-      console.log('No hay sesión activa');
+      console.log('No hay sesión activa:', error.message);
+      setUsuario(null);
     } finally {
       setLoading(false);
     }

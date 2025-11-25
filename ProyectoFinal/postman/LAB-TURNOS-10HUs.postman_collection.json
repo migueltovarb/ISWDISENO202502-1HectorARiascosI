@@ -16,7 +16,7 @@
 						"header": [{"key": "Content-Type", "value": "application/json"}],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"nombre\": \"Juan Pérez\",\n    \"correo\": \"juan.perez@estudiante.edu\",\n    \"password\": \"password123\",\n    \"rol\": \"ESTUDIANTE\"\n}"
+							"raw": "{\n    \"nombre\": \"Pablo Lopez\",\n    \"correo\": \"pablo.lopez@estudiante.edu\",\n    \"password\": \"hector123\",\n    \"rol\": \"ESTUDIANTE\"\n}"
 						},
 						"url": {
 							"raw": "{{base_url}}/api/usuarios/registro",
@@ -37,7 +37,7 @@
 						"header": [{"key": "Content-Type", "value": "application/json"}],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"correo\": \"juan.perez@estudiante.edu\",\n    \"password\": \"password123\"\n}"
+							"raw": "{\n    \"correo\": \"pablo.lopez@estudiante.edu\",\n    \"password\": \"hector123\"\n}"
 						},
 						"url": {"raw": "{{base_url}}/api/usuarios/login", "host": ["{{base_url}}"], "path": ["api", "usuarios", "login"]}
 					}
@@ -49,7 +49,7 @@
 						"header": [{"key": "Content-Type", "value": "application/json"}],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"correo\": \"carlos.gomez@profesor.edu\",\n    \"password\": \"profesor123\"\n}"
+							"raw": "{\n    \"correo\": \"miguel.angel@profesor.edu\",\n    \"password\": \"profesor123\"\n}"
 						},
 						"url": {"raw": "{{base_url}}/api/usuarios/login", "host": ["{{base_url}}"], "path": ["api", "usuarios", "login"]}
 					}

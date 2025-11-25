@@ -71,9 +71,9 @@
 ### Registro Estudiante
 ```json
 {
-    "nombre": "Juan Pérez",
-    "correo": "juan.perez@estudiante.edu",
-    "password": "password123",
+    "nombre": "Pablo Lopez",
+    "correo": "pablo.lopez@estudiante.edu",
+    "password": "hector123",
     "rol": "ESTUDIANTE"
 }
 ```
@@ -81,8 +81,8 @@
 ### Registro Profesor
 ```json
 {
-    "nombre": "Dr. Carlos Gómez",
-    "correo": "carlos.gomez@profesor.edu",
+    "nombre": "Ing. Miguel Angel",
+    "correo": "miguel.angel@profesor.edu",
     "password": "profesor123",
     "rol": "PROFESOR"
 }
@@ -91,8 +91,8 @@
 ### Login
 ```json
 {
-    "correo": "juan.perez@estudiante.edu",
-    "password": "password123"
+    "correo": "pablo.lopez@estudiante.edu",
+    "password": "hector123"
 }
 ```
 

@@ -1,6 +1,5 @@
 com\laboratorio\turnos\repository\UsuarioRepository.class
 com\laboratorio\turnos\model\FranjaHoraria.class
-com\laboratorio\turnos\config\CorsConfig$1.class
 com\laboratorio\turnos\dto\DisponibilidadDTO.class
 com\laboratorio\turnos\dto\RegistroDTO.class
 com\laboratorio\turnos\repository\ReservaRepository.class
@@ -8,6 +7,7 @@ com\laboratorio\turnos\config\CorsConfig.class
 com\laboratorio\turnos\model\RolUsuario.class
 com\laboratorio\turnos\service\ReservaService.class
 com\laboratorio\turnos\repository\LaboratorioRepository.class
+com\laboratorio\turnos\config\SecurityConfig.class
 com\laboratorio\turnos\controller\DisponibilidadController.class
 com\laboratorio\turnos\model\Equipo.class
 com\laboratorio\turnos\model\Usuario.class
@@ -27,6 +27,7 @@ com\laboratorio\turnos\repository\BloqueoRepository.class
 com\laboratorio\turnos\dto\ApiResponse.class
 com\laboratorio\turnos\dto\BloqueoDTO.class
 com\laboratorio\turnos\service\UsuarioService.class
+com\laboratorio\turnos\controller\LaboratorioController.class
 com\laboratorio\turnos\dto\LoginDTO.class
 com\laboratorio\turnos\model\Profesor.class
 com\laboratorio\turnos\controller\ReservaController.class
